@@ -1,24 +1,36 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
+import { ShieldCheck, Building2, HandCoins, Sparkles, Dog, Users, Landmark, MessagesSquare } from "lucide-react";
+import hero from "@/assets/kosmos-hero.jpg.asset.json";
+import { Page } from "@/components/site-shell";
+import { TeamPreview } from "@/components/team-card";
+import { priorities, team } from "@/lib/kosmos-data";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({ meta: [
+    { title: "Voice of Kosmos | Jaypee Kosmos Residents" },
+    { name: "description", content: "Meet Voice of Kosmos—residents and professionals committed to transparent, accountable community action." },
+    { property: "og:title", content: "Voice of Kosmos" },
+    { property: "og:description", content: "A safer, cleaner, better-connected Kosmos." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+  ]}),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
+const priorityItems = priorities.map((item, index) => ({ item, Icon: [ShieldCheck, Building2, HandCoins, Sparkles, Dog, Users, Landmark, MessagesSquare][index] ?? ShieldCheck }));
+
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <Page>
+      <section className="relative min-h-[610px] overflow-hidden bg-primary text-primary-foreground">
+        <img src={hero.url} alt="Landscaped residential community at Jaypee Kosmos" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-hero-overlay" />
+        <div className="relative mx-auto flex min-h-[610px] max-w-6xl items-center px-5 pb-20 pt-16"><div className="max-w-2xl"><p className="eyebrow text-primary-foreground/75">A safer, cleaner, better-connected Kosmos</p><h1 className="mt-5 font-display text-6xl uppercase leading-[.9] sm:text-7xl lg:text-8xl">Voice of<br /><span className="text-highlight">Kosmos</span></h1><p className="mt-5 text-xl font-semibold">Our Society. Our Voice. A Brighter Tomorrow.</p><p className="mt-5 max-w-xl text-sm leading-7 text-primary-foreground/75">We are residents of Jaypee Kosmos with professional experience and a commitment to transparent, accountable community action. We stand for faster issue resolution, honest communication and outcomes residents can see.</p><div className="mt-8 flex flex-wrap gap-3"><Link to="/agenda" className="rounded-md bg-highlight px-5 py-3 text-xs font-extrabold uppercase text-highlight-foreground">Our agenda →</Link><Link to="/team" className="rounded-md border border-primary-foreground/40 px-5 py-3 text-xs font-extrabold uppercase text-primary-foreground">Meet our team →</Link></div></div></div>
+      </section>
+      <section className="relative z-10 mx-auto -mt-10 max-w-6xl px-5"><div className="grid overflow-hidden rounded-md border border-border bg-card shadow-card sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-8">{priorityItems.map(({ item, Icon }) => <Link to="/agenda" key={item[0]} className="flex min-h-32 flex-col items-center justify-center border-b border-r border-border p-3 text-center text-primary last:border-r-0"><span className="mb-3 grid size-10 place-items-center rounded-md bg-accent text-accent-foreground"><Icon size={20}/></span><span className="text-[11px] font-extrabold leading-4">{item[0]}</span></Link>)}</div></section>
+      <TeamPreview members={team.slice(0, 6)} />
+      <section className="bg-background py-20"><div className="mx-auto max-w-6xl px-5 text-center"><p className="eyebrow">People · Priorities · Progress</p><h2 className="section-title mx-auto max-w-3xl">Let’s build a better <span>Kosmos</span> together</h2><p className="mx-auto mt-4 max-w-xl text-muted-foreground">A safer, cleaner, better-connected and more accountable community.</p></div></section>
+    </Page>
   );
 }
