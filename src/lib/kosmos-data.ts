@@ -63,3 +63,64 @@ export const agenda = [
   ["Transparent Tender System", "पारदर्शी टेंडर व्यवस्था", "Selection of competent vendors through a transparent public tender process.", "पारदर्शी सार्वजनिक टेंडर प्रक्रिया से सक्षम विक्रेताओं का चयन होगा।"],
   ["Air Pollution Control", "वायु प्रदूषण नियंत्रण", "Control air pollution through dust-control measures and practical steps.", "धूल नियंत्रण और अन्य व्यावहारिक उपायों से वायु प्रदूषण कम किया जाएगा।"],
 ] as const;
+
+export const manifestoCommitments = [
+  {
+    key: "A",
+    title: ["A Seepage-Free Kosmos", "सीपेज-मुक्त कॉसमॉस"],
+    summary: ["Every bathroom grouted. Every AC drain pipeline repaired or replaced.", "हर बाथरूम की ग्राउटिंग और हर एसी ड्रेन पाइप की मरम्मत या बदलाव।"],
+    points: [
+      ["AOA-led grouting drive for all flats", "सभी फ्लैटों के लिए AOA के नेतृत्व में ग्राउटिंग अभियान"],
+      ["Ensure grouting twice a year", "साल में दो बार ग्राउटिंग सुनिश्चित करना"],
+      ["Audit shaft and wall pipes, with remedial work as required", "शाफ्ट और दीवार की पाइपों का ऑडिट तथा आवश्यक सुधार कार्य"],
+    ],
+    deadline: ["3 Months", "3 महीने"],
+  },
+  {
+    key: "B",
+    title: ["Builder Accountability", "बिल्डर की जवाबदेही"],
+    summary: ["Every rupee of maintenance and all pending work accounted for.", "रखरखाव के हर रुपये और सभी लंबित कार्यों का पूरा हिसाब।"],
+    points: [
+      ["Builder to show where every penny of maintenance charges was spent", "बिल्डर रखरखाव शुल्क के हर पैसे के खर्च का विवरण दे"],
+      ["Proper completion of all pending work", "सभी लंबित कार्यों को उचित रूप से पूरा कराना"],
+      ["Roads, lighting, drainage, debris removal and insurance accountability", "सड़क, प्रकाश, जल निकासी, मलबा हटाने और बीमा की जवाबदेही"],
+    ],
+    deadline: ["Ongoing", "निरंतर"],
+  },
+  {
+    key: "C",
+    title: ["Legal Action Against the Builder", "बिल्डर के विरुद्ध कानूनी कार्रवाई"],
+    summary: ["Accountability through law", "कानून के माध्यम से जवाबदेही"],
+    points: [
+      ["₹50 Crore IFMS — secure complete records and pursue recovery with applicable interest for transfer to the AOA", "₹50 करोड़ IFMS — पूरे रिकॉर्ड प्राप्त कर लागू ब्याज सहित वसूली और AOA को हस्तांतरण"],
+      ["Stop excessive ₹9–12 lakh transfer charges under the applicable RERA circular and help residents recover unlawful collections", "लागू RERA परिपत्र के तहत ₹9–12 लाख के अनुचित ट्रांसफर शुल्क को रोकना और अवैध वसूली वापस दिलाना"],
+      ["Publish a legal white paper covering major cases, orders, expenses, progress and next steps", "प्रमुख मामलों, आदेशों, खर्च, प्रगति और अगले कदमों पर कानूनी श्वेत पत्र प्रकाशित करना"],
+      ["Defend the society’s financial, legal and property interests through prompt legal action", "त्वरित कानूनी कार्रवाई से सोसायटी के वित्तीय, कानूनी और संपत्ति हितों की रक्षा"],
+      ["Enforce the builder’s plaster, painting and pending repair obligations", "प्लास्टर, पेंटिंग और लंबित मरम्मत की बिल्डर की जिम्मेदारी लागू कराना"],
+      ["Review, strengthen and pursue every pending AOA case", "हर लंबित AOA मामले की समीक्षा, मजबूती और सक्रिय पैरवी"],
+      ["Create a strong AOA legal committee to scrutinise works, vendors, contracts, tenders and compliance", "कार्य, विक्रेता, अनुबंध, टेंडर और अनुपालन की जाँच के लिए मजबूत AOA कानूनी समिति"],
+    ],
+    deadline: ["2 Months", "2 महीने"],
+  },
+  {
+    key: "D",
+    title: ["Transparent, SOP-Based AOA", "पारदर्शी, SOP-आधारित AOA"],
+    summary: ["A resident-first AOA that is easy to reach, with every flat owner as a member.", "निवासी-प्रथम, आसानी से उपलब्ध AOA जिसमें हर फ्लैट मालिक सदस्य हो।"],
+    points: [
+      ["Grow AOA membership from about 1,300 toward 100% of eligible flat owners", "लगभग 1,300 से बढ़ाकर सभी पात्र फ्लैट मालिकों तक AOA सदस्यता पहुँचाना"],
+      ["Keep the website updated with all records, circulars and minutes of meetings", "सभी रिकॉर्ड, परिपत्र और बैठक कार्यवृत्त वेबसाइट पर नियमित अपडेट करना"],
+      ["Dedicated AOA helpline for grievance redressal", "शिकायत निवारण के लिए समर्पित AOA हेल्पलाइन"],
+      ["Publish audited accounts every three months", "हर तीन महीने में ऑडिट किए खाते प्रकाशित करना"],
+      ["Select all vendors through public tender for a commission-free AOA", "कमीशन-मुक्त AOA के लिए सभी विक्रेताओं का चयन सार्वजनिक टेंडर से"],
+      ["SOP calendar for horticulture, lifts, AC pipes each April and drainage before monsoon", "बागवानी, लिफ्ट, हर अप्रैल एसी पाइप और मानसून से पहले जल निकासी का SOP कैलेंडर"],
+    ],
+    deadline: ["SOPs: 2 Months · Membership: 3 Months", "SOP: 2 महीने · सदस्यता: 3 महीने"],
+  },
+] as const;
+
+export const manifestoSections = [
+  { title: ["Building Maintenance, Electricity & Water", "भवन रखरखाव, बिजली और पानी"], points: [["Structural audit through a competent authority", "सक्षम प्राधिकरण से संरचनात्मक ऑडिट"], ["Paint and plaster of all towers", "सभी टावरों की पेंटिंग और प्लास्टर"], ["Regular monitoring of building condition and cracks", "भवन की स्थिति और दरारों की नियमित निगरानी"], ["Separate the Kosmos meter from Wish Town", "कॉसमॉस मीटर को विश टाउन से अलग करना"], ["Audit bills so residents pay only actual charges", "बिल ऑडिट ताकि निवासी केवल वास्तविक शुल्क दें"], ["Solar power for common-area bills", "साझा क्षेत्रों के बिलों के लिए सौर ऊर्जा"], ["Quarterly STP inspection", "हर तीन महीने में STP निरीक्षण"], ["Push to start Ganga water supply", "गंगा जल आपूर्ति शुरू कराने का प्रयास"], ["Clean, well-maintained common areas", "स्वच्छ और सुव्यवस्थित साझा क्षेत्र"]] },
+  { title: ["Security", "सुरक्षा"], points: [["New high-tech security agency with trained guards", "प्रशिक्षित गार्ड वाली नई हाई-टेक सुरक्षा एजेंसी"], ["Identify and adequately staff guard posts", "गार्ड पोस्ट चिन्हित कर पर्याप्त तैनाती"], ["Strict tenant and domestic help verification", "किरायेदार और घरेलू सहायकों का सख्त सत्यापन"], ["Access control and CCTV surveillance", "प्रवेश नियंत्रण और CCTV निगरानी"], ["Regulate property brokers as per RERA", "RERA के अनुसार प्रॉपर्टी ब्रोकरों का नियमन"]] },
+  { title: ["Senior Citizens", "वरिष्ठ नागरिक"], points: [["Bhajan and religious clubs, and reading groups", "भजन, धार्मिक क्लब और पठन समूह"], ["Regular medical camps", "नियमित चिकित्सा शिविर"], ["Sanctioned space for religious activities", "धार्मिक गतिविधियों के लिए स्वीकृत स्थान"], ["Library and community support", "पुस्तकालय और सामुदायिक सहयोग"], ["Assistance with civic and health needs", "नागरिक और स्वास्थ्य आवश्यकताओं में सहायता"]] },
+  { title: ["Fit Kosmos: Child & Youth", "फिट कॉसमॉस: बच्चे और युवा"], points: [["Sports facilities, teams and inter-society meets", "खेल सुविधाएँ, टीमें और अंतर-सोसायटी प्रतियोगिताएँ"], ["Sports and cultural workshops for children", "बच्चों के लिए खेल और सांस्कृतिक कार्यशालाएँ"], ["Olympiad, essay and book-writing workshops", "ओलंपियाड, निबंध और पुस्तक-लेखन कार्यशालाएँ"], ["Overall personality and talent development", "समग्र व्यक्तित्व और प्रतिभा विकास"]] },
+] as const;
