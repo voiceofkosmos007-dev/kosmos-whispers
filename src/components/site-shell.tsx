@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu } from "lucide-react";
 import type { ReactNode } from "react";
 import logo from "@/assets/voice-of-kosmos-logo.png.asset.json";
+import { Button } from "@/components/ui/button";
 
 export function Header() {
   return <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
@@ -10,10 +11,11 @@ export function Header() {
         <img src={logo.url} alt="Voice of Kosmos" className="size-11 shrink-0 rounded-full sm:size-14" />
         <span className="hidden sm:block"><strong className="block font-display text-lg uppercase text-primary">Voice of <span className="text-highlight">Kosmos</span></strong><small className="block text-[10px] font-bold uppercase text-muted-foreground">Jaypee Kosmos, Noida</small></span>
       </Link>
-      <nav className="hidden items-center gap-8 text-sm font-bold text-primary md:flex" aria-label="Main navigation">
+      <nav className="hidden items-center gap-5 text-sm font-bold text-primary md:flex" aria-label="Main navigation">
         <Link to="/" activeProps={{ className: "text-highlight" }}>Home</Link>
         <Link to="/agenda" activeProps={{ className: "text-highlight" }}>Our Agenda</Link>
         <Link to="/team" activeProps={{ className: "text-highlight" }}>Our Team</Link>
+        <Link to="/dog-safety" activeProps={{ className: "text-highlight" }}>Dog Safety</Link>
       </nav>
       <Link to="/team" className="hidden rounded-md bg-highlight px-5 py-3 text-xs font-extrabold uppercase text-highlight-foreground shadow-sm transition-transform hover:-translate-y-0.5 sm:inline-flex">Meet our team →</Link>
       <Link to="/team" className="grid size-10 shrink-0 place-items-center text-primary md:hidden" aria-label="Open team page"><Menu size={22} /></Link>
@@ -31,5 +33,5 @@ export function Footer() {
 }
 
 export function Page({ children }: { children: ReactNode }) {
-  return <><Header /><main>{children}</main><Footer /></>;
+  return <><Header /><nav className="flex justify-center border-b border-border bg-background px-2 py-2 md:hidden" aria-label="Page navigation"><Button asChild variant="ghost" size="sm"><Link to="/">Home</Link></Button><Button asChild variant="ghost" size="sm"><Link to="/agenda">Agenda</Link></Button><Button asChild variant="ghost" size="sm"><Link to="/team">Team</Link></Button><Button asChild variant="ghost" size="sm"><Link to="/dog-safety">Dog Safety</Link></Button></nav><main>{children}</main><Footer /></>;
 }
