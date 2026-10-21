@@ -15,7 +15,7 @@ export function Header() {
         <Link to="/" activeProps={{ className: "text-highlight" }}>Home</Link>
         <Link to="/agenda" activeProps={{ className: "text-highlight" }}>Our Agenda</Link>
         <Link to="/team" activeProps={{ className: "text-highlight" }}>Our Team</Link>
-        <Link to="/dog-safety" activeProps={{ className: "text-highlight" }}>Dog Safety</Link>
+        <Link to="/initiatives" activeProps={{ className: "text-highlight" }}>Our Initiatives</Link>
       </nav>
       <Link to="/team" className="hidden rounded-md bg-highlight px-5 py-3 text-xs font-extrabold uppercase text-highlight-foreground shadow-sm transition-transform hover:-translate-y-0.5 sm:inline-flex">Meet our team →</Link>
       <Link to="/team" className="grid size-10 shrink-0 place-items-center text-primary md:hidden" aria-label="Open team page"><Menu size={22} /></Link>
@@ -33,5 +33,5 @@ export function Footer() {
 }
 
 export function Page({ children }: { children: ReactNode }) {
-  return <><Header /><nav className="flex justify-center border-b border-border bg-background px-2 py-2 md:hidden" aria-label="Page navigation"><Button asChild variant="ghost" size="sm"><Link to="/">Home</Link></Button><Button asChild variant="ghost" size="sm"><Link to="/agenda">Agenda</Link></Button><Button asChild variant="ghost" size="sm"><Link to="/team">Team</Link></Button><Button asChild variant="ghost" size="sm"><Link to="/dog-safety">Dog Safety</Link></Button></nav><main>{children}</main><Footer /></>;
+  return <><Header /><nav className="flex flex-wrap justify-center border-b border-border bg-background px-2 py-2 md:hidden" aria-label="Page navigation"><Button asChild variant="ghost" size="sm"><Link to="/">Home</Link></Button><Button asChild variant="ghost" size="sm"><Link to="/agenda">Agenda</Link></Button><Button asChild variant="ghost" size="sm"><Link to="/team">Team</Link></Button><Button asChild variant="ghost" size="sm"><Link to="/initiatives">Our Initiatives</Link></Button></nav><main>{children}</main><Footer /></>;
 }

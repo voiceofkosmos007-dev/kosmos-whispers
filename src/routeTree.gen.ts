@@ -11,7 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AgendaRouteImport } from './routes/agenda'
-import { Route as DogSafetyRouteImport } from './routes/dog-safety'
+import { Route as InitiativesRouteImport } from './routes/initiatives'
 import { Route as TeamRouteImport } from './routes/team'
 
 const IndexRoute = IndexRouteImport.update({
@@ -24,9 +24,9 @@ const AgendaRoute = AgendaRouteImport.update({
   path: '/agenda',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DogSafetyRoute = DogSafetyRouteImport.update({
-  id: '/dog-safety',
-  path: '/dog-safety',
+const InitiativesRoute = InitiativesRouteImport.update({
+  id: '/initiatives',
+  path: '/initiatives',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TeamRoute = TeamRouteImport.update({
@@ -38,34 +38,34 @@ const TeamRoute = TeamRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/agenda': typeof AgendaRoute
-  '/dog-safety': typeof DogSafetyRoute
+  '/initiatives': typeof InitiativesRoute
   '/team': typeof TeamRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/agenda': typeof AgendaRoute
-  '/dog-safety': typeof DogSafetyRoute
+  '/initiatives': typeof InitiativesRoute
   '/team': typeof TeamRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/agenda': typeof AgendaRoute
-  '/dog-safety': typeof DogSafetyRoute
+  '/initiatives': typeof InitiativesRoute
   '/team': typeof TeamRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/agenda' | '/dog-safety' | '/team'
+  fullPaths: '/' | '/agenda' | '/initiatives' | '/team'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/agenda' | '/dog-safety' | '/team'
-  id: '__root__' | '/' | '/agenda' | '/dog-safety' | '/team'
+  to: '/' | '/agenda' | '/initiatives' | '/team'
+  id: '__root__' | '/' | '/agenda' | '/initiatives' | '/team'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AgendaRoute: typeof AgendaRoute
-  DogSafetyRoute: typeof DogSafetyRoute
+  InitiativesRoute: typeof InitiativesRoute
   TeamRoute: typeof TeamRoute
 }
 
@@ -85,11 +85,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AgendaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/dog-safety': {
-      id: '/dog-safety'
-      path: '/dog-safety'
-      fullPath: '/dog-safety'
-      preLoaderRoute: typeof DogSafetyRouteImport
+    '/initiatives': {
+      id: '/initiatives'
+      path: '/initiatives'
+      fullPath: '/initiatives'
+      preLoaderRoute: typeof InitiativesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/team': {
@@ -105,7 +105,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AgendaRoute: AgendaRoute,
-  DogSafetyRoute: DogSafetyRoute,
+  InitiativesRoute: InitiativesRoute,
   TeamRoute: TeamRoute,
 }
 export const routeTree = rootRouteImport
