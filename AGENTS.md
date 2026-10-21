@@ -13,3 +13,4 @@
 
 - Keep shared campaign copy and profile records in `src/lib/kosmos-data.ts` so home, team, and agenda pages remain consistent.
 - Keep shared navigation, footer, and profile presentation in `src/components/`; route files only compose page-level sections.
+- Keep document-based resident updates in shared content records and render them with a dedicated presentation component; supporting PDFs use asset pointers so originals remain available without bundling binaries.
