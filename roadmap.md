@@ -1,3 +1,3 @@
-- [ ] Add dog-safety content and four supporting PDF links.
-- [ ] Add home and navigation access, including phones.
-- [ ] Verify the page and PDF links.
+- [x] Add dog-safety content and four supporting PDF links.
+- [x] Add home and navigation access, including phones.
+- [x] Verify the page and PDF links.
